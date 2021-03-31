@@ -1,3 +1,13 @@
+/*
+============================================
+; Title:  authController.js
+; Author: James Pinson
+; Date: March 30th 2021
+; Description: This is our authController.js file. 
+;===========================================
+*/
+
+//This sets up the user variable and connects it to the desired path.
 var User = require('../models/user');
 
 //This registers a new user on POST

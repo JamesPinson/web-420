@@ -1,6 +1,17 @@
+/*
+============================================
+; Title:  api-catalog.js
+; Author: James Pinson
+; Date: March 30th 2021
+; Description: This sets up our catalog file. 
+;===========================================
+*/
+
+//This sets up our require statements.
 var express = require('express');
 var router = express.Router();
 
+//This requires the path for the auth_controller.
 var auth_controller = require('../controllers/authController');
 
 //This is the POST request for registering a user
