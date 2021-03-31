@@ -17,7 +17,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 
-
+//This sets the route to our index page. 
 var index = require('./routes/index');
 
 //This says we are using express to create the app. 
@@ -42,7 +42,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+//This sets the path to our homepage. 
 app.use('/', index);
 
 
@@ -53,7 +53,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-
+//This creates the error message to display when an error occurs. 
 app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
